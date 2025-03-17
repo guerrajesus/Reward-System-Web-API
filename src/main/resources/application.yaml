@@ -1,0 +1,15 @@
+spring:
+   datasource:
+      username: reward_system
+      password: reward_system
+      url: jdbc:mysql://localhost:3306/reward_system
+   
+   jpa:
+      hibernate:
+         ddl-auto: update
+      show-sql: true
+      defer-datasource-initialization: true
+      
+   sql:
+      init:
+         mode: never
