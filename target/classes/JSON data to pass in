@@ -1,0 +1,74 @@
+
+  {
+    "pointValue": 150,
+    "description": "Deluxe Sandwich Meal"
+  }
+  {
+    "pointValue": 130,
+    "description": "12 ct Nuggets"
+  }
+  {
+    "pointValue": 90,
+    "description": "Medium Fries"
+  }
+  {
+    "pointValue": 180,
+    "description": "Spicy Deluxe Sandwich Meal"
+  }
+  {
+    "pointValue": 160,
+    "description": "Grilled Chicken Sandwich Meal"
+  }
+  {
+    "pointValue": 200,
+    "description": "Chick-fil-A Chicken Biscuit Meal"
+  }
+
+  {
+    "pointValue": 100,
+    "description": "Frosted Lemonade"
+  }
+
+  {
+    "pointValue": 80,
+    "description": "Large Waffle Fries"
+  }
+
+  {
+    "pointValue": 140,
+    "description": "8 ct Grilled Nuggets"
+  }
+
+  {
+    "pointValue": 250,
+    "description": "Chick-n-Minis (4 ct) Meal"
+  }
+
+{
+	"userFirstName": "Jesus",
+	"userLastName": "Guerra",
+	"userEmail": "JesusGM@gmail.com",
+	"userPhone": "(702)300-4011"
+  }  
+
+  {
+	"userFirstName": "Mike",
+	"userLastName": "Goeres",
+	"userEmail": "MikeG@gmail.com",
+	"userPhone": "(702)400-4011"
+  }
+  
+  {
+	"userFirstName": "Ted",
+	"userLastName": "Standley",
+	"userEmail": "TedStandley@gmail.com",
+	"userPhone": "(702)400-4011"
+  }
+
+{
+  "userFirstName": "Jesus",
+  "userLastName": "Guerra",
+  "userEmail": "JesusGM@gmail.com",
+  "userPhone": "(702)300-4011",
+  "pointBalance": 2000
+  } 

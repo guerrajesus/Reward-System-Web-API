@@ -21,10 +21,10 @@ public class Offer {
 	
 	private String offerName;
 	private Integer pointsRequired;  
-	private String description;
+	//private String description; removed 
 	
 	@EqualsAndHashCode.Exclude
 	@ToString.Exclude
 	@ManyToMany(mappedBy = "offers")
 	private Set<User> users = new HashSet<>();
-}
+} 

@@ -2,6 +2,7 @@ package reward.system.controller.model;
 
 import java.time.LocalDateTime;
 import java.util.HashSet;
+import java.util.LinkedHashSet;
 import java.util.Set;
 import java.util.stream.Collectors;
 
@@ -9,12 +10,11 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 import reward.system.entity.Offer;
 import reward.system.entity.RewardLog;
-import reward.system.entity.TierStatus;
 import reward.system.entity.User;
 
 @Data //Getters and setter
 @NoArgsConstructor 
-public class UserData {
+public class UserData { 
 	
 	private Long userId;
 	private String userFirstName;
@@ -22,20 +22,21 @@ public class UserData {
 	private String userEmail;
 	private String userPhone;
 	private LocalDateTime dateCreated;
-	private TierStatus tierStatus;
+	private String tierStatus; 
 	private Integer pointBalance;
 	
 	private Set<RewardLogData> rewardLogs = new HashSet<>();
-	private Set<OfferData> offers = new HashSet<>();
-	
-	public UserData(User user) {     // New UserData(userData);
+	private Set<OfferData> offers = new LinkedHashSet<>();
+					
+	public UserData(User user) { //Constructor - New UserData(userData);
 		userId = user.getUserId();
 		userFirstName = user.getUserFirstName();
 		userLastName = user.getUserLastName();
 		userEmail = user.getUserEmail();
-		dateCreated = user.getDateCreated();
-		tierStatus = user.getTierStatus();
+		userPhone = user.getUserPhone();
+		tierStatus = user.getTierStatus().name(); 
 		pointBalance = user.getPointBalance();
+		dateCreated = user.getDateCreated();
 		
 		if(user.getRewardLog() != null) {
 			for(RewardLog rewardLog : user.getRewardLog()) {
@@ -47,11 +48,7 @@ public class UserData {
 			this.offers = user.getOffers().stream()
 					.map(OfferData::new).collect(Collectors.toSet());
 		}
-		
-		
-		
-		
-		
+				
 		
 	}
 	
@@ -61,14 +58,13 @@ public class UserData {
 		private Long offerId;
 		private String offerName;
 		private Integer pointsRequired;  
-		private String description;
+		//private String description; removed 
 		//no user linking from that
 		
 		public OfferData(Offer offer) {
 			offerId = offer.getOfferId();
 			offerName = offer.getOfferName();
 			pointsRequired = offer.getPointsRequired();
-			description = offer.getDescription();
 		}
 	}
 	
